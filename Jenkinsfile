@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("build"){
       steps{
-        echo "building an application"
+        echo "building an application-webhook"
         script{  def exp=2+2>3 ? 'true' : 'incorrect'
         }
       }

@@ -1,1 +1,1 @@
-This page is try multibranch pipeline in jenkins
+This page is to try multibranch pipeline in jenkins

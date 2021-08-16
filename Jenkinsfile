@@ -4,6 +4,8 @@ pipeline{
     stage("build"){
       steps{
         echo "building an application"
+        script{  def 2+2>3 ? 'true' : 'incorrect'
+        }
       }
     }
     stage("test"){

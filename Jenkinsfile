@@ -4,7 +4,7 @@ pipeline{
     stage("build"){
       steps{
         echo "building an application"
-        script{  def 2+2>3 ? 'true' : 'incorrect'
+        script{  def exp=2+2>3 ? 'true' : 'incorrect'
         }
       }
     }

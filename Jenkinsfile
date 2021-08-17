@@ -1,5 +1,7 @@
 pipeline{
   agent any
+  parameters{
+  }
   environment{
     NEW_VERSION='1.3.0'
     SERVER_CREDENTIALS=credentials('git')

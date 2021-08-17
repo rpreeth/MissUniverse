@@ -1,5 +1,9 @@
 pipeline{
   agent any
+  environment{
+    NEW_VERSION='1.3.0'
+    SERVER_CREDENTIALS=credentials('git')
+  }
   stages{
     stage("build"){
       steps{
@@ -11,11 +15,14 @@ pipeline{
     stage("test"){
       steps{
         echo "testing the application"
+        echo "credentials ${SERVER_CREDENTIALS}"
+        
       }
     }
     stage("deploy"){
       steps{
         echo "deploy the application"
+        echo"deploy version ${NEW_VERSION}"
       }
     }
   }

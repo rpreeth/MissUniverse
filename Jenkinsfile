@@ -20,9 +20,15 @@ pipeline{
       }
     }
     stage("test"){
+      when{
+        expression{
+          param.defaultValue== true
+        }
+      }
       steps{
         echo "testing the application"
         echo "credentials ${SERVER_CREDENTIALS}"
+        
         
       }
     }

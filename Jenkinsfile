@@ -2,7 +2,7 @@ pipeline{
   agent any
   parameters{
     choice(name: 'version', choices:['1.2','1.34','1.45'], description:'check the choice')
-    booleanParam(name: 'install', defaultValue=true)
+    booleanParam(name: 'install', defaultValue:true)
   }
   tools{
     maven 'maven'
